@@ -18,7 +18,7 @@ let opscore=document.querySelector(".oscore");
 opscore.innerText=`Opponent Score:  ${j}`;
 // Send username to the WebSocket server
 
-const socket=io("http://localhost:8080");
+const socket=io("http://192.168.139.18:8080");
 
 let room=null;
 
@@ -31,14 +31,18 @@ socket.on('welcome',(data)=>{
 
 let box=document.querySelector(".mainbox");
 let boxforimage=document.querySelector(".fruit");
+let photo=document.createElement("img");
+photo.classList.add("image");
+boxforimage.appendChild(photo);
+
 
 socket.on('wait',()=>{
-    boxforimage.innerText="Waiting for Opponent";
+    photo.src="https://64.media.tumblr.com/1317d61058c0c967dd2367830703e836/7dfbe727fefebec8-71/s400x600/6874b2f1ea3b022c2514bfc37649f862f8c3c35d.gif";
 });
 
 socket.on('match_found',(oname)=>{
     pappu.innerText=`Opponent Name:- ${oname}`;
-    boxforimage.innerText="";
+    photo.src="";
 })
 
 
@@ -66,11 +70,7 @@ socket.on('quiz',(options)=>{
     let b=options[a2];
     let c=options[a3];
     let d=options[a4];
-    let photo=document.createElement("img");
-    photo.src=options[l-1];
-    photo.classList.add("image");
-    boxforimage.innerHTML="";
-    boxforimage.appendChild(photo);
+    photo.src=options[4];
     const o1=document.querySelector("#a");
     o1.innerText=a;
     const o2=document.querySelector("#b");
@@ -114,22 +114,43 @@ socket.on('quiz',(options)=>{
     });
     
     socket.on("result",()=>{
+        boxforimage.style.display = "flex";
+        boxforimage.style.justifyContent = "center";
+        boxforimage.style.alignItems = "center"
         if(i>j)
         {
-            boxforimage.innerHTML="<h1>WINNER OP BOLTE</h1>";
+            boxforimage.innerHTML="<h1>Congratulation You WON!</h1>";
         }
         else if(i<j)
         {
-            boxforimage.innerHTML="<h1>1 hp bacha bhai</h1>";
+            boxforimage.innerHTML="<h1>Better Luck Next Time</h1>";
         }
         else
         {
-            boxforimage.innerHTML="<h1> okay tata bye bye gya</h1>";
+            boxforimage.innerHTML="<h1>Draw :|</h1>";
         }
     });
 
 });
 
+
+const openBtn = document.getElementById('openContactPanel');
+const closeBtn = document.getElementById('closeContactPanel');
+const panel = document.getElementById('contactPanel');
+
+// Open the panel when the button is clicked
+if (openBtn && panel) {
+    openBtn.addEventListener('click', () => {
+        panel.style.width = '250px';  // Open the panel
+    });
+}
+
+// Close the panel when the close button is clicked
+if (closeBtn && panel) {
+    closeBtn.addEventListener('click', () => {
+        panel.style.width = '0';  // Close the panel
+    });
+}
 
 
 

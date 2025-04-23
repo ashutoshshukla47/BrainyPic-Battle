@@ -10,30 +10,32 @@
 <body>
     <div id="menu">
         <div class="logo-container">
-        <img class="logoimg" src="logo3.gif" alt="BrainyPic Battle" height="50px">
+            <img class="logoimg" src="logo3.gif" alt="BrainyPic Battle" height="50px">
         </div>
         <div class="navbar">
-        <a class="anch" href="home.html">
-            Home
-        </a>
-        <a class="anch">
-            About Us
-        </a>
-        <a class="anch" href="projects.html">
-            Projects
-        </a>
-        <a class="anch">
-            Contact Us
-        </a>
+            <a class="anch" href="home.html">Home</a>
+            <a class="anch">About Us</a>
+            <a class="anch" href="projects.html">Projects</a>
+            <a class="anch" id="openContactPanel">Contact Us</a>
         </div>
     </div>
+    
+    <div id="contactPanel" class="side-panel">
+        <button id="closeContactPanel" class="close-btn">&times;</button>
+        <ul>
+            <li><a href="tel:‪+917697990750‬">📞 Call Us</a></li>
+            <li><a href="mailto:abhinavpan2004@gmail.com">✉ Email Us</a></li>
+            <li><a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_blank">🔗 LinkedIn</a></li>
+            <li><a href="https://github.com/005-adarsh-pandey" target="_blank">💻 GitHub</a></li>
+        </ul>
+    </div>
     <div class="scoreboard">
         <div>
             <h4 class="name"></h4>
             <h5 class="score"></h5>
         </div>
         <img src="V (1).gif">
-        <div style="background-color:  #abcc86; margin-left:-5.5rem; margin-right:-2.8rem; padding-left: 1.2rem; padding-right: 1rem;">
+        <div style="background-color:  #abcc86; margin-left:-5.5rem; margin-right:-2.8rem; padding-left: 1.2rem; padding-right: 1rem; border-radius: 0rem 1rem 1rem 0rem;">
             <h4 class="oname"></h4>
             <h5 class="oscore"></h5>
         </div>
@@ -41,10 +43,10 @@
     <div class="mainbox">
         <div class="fruit"></div>
         <div class="option">
-            <button class="btn" id="a">No answer</button>
-            <button class="btn" id="b">No answer</button>
-            <button class="btn" id="c">No answer</button>
-            <button class="btn" id="d">No answer</button>
+            <button class="btn" id="a">Still</button>
+            <button class="btn" id="b">Wating</button>
+            <button class="btn" id="c">For</button>
+            <button class="btn" id="d">Opponent</button>
         </div>
     </div>
     <footer class="low">

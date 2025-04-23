@@ -188,7 +188,7 @@ io.on("connection", (socket) => {
                         p1.emit("result");
                         p2.emit("result");
                     }
-                    else {
+                    else if(x<10) {
                         let options = [];
                         let a1 = Math.floor(Math.random() * n);
                         if (trr[a1] == 0) {

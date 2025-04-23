@@ -177,7 +177,83 @@ html, body {
 #menu {
   height: 45px;
   display: flex;
-   z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(270deg, #abcc86, #72a688);
+  padding: 0 10px;
+  box-sizing: border-box;
+  z-index: 10;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logoimg {
+  height: 45px;
+  object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.navbar a {
+  font-size: large;
+  font-style: inherit;
+  color: #0f1111;
+  text-decoration: none;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Styling for the contact panel */
+#contactPanel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#contactPanel a {
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+
+#contactPanel a:hover {
+  color: #f08804;
+}
+
+#contactPanel .closebtn {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 
@@ -189,3 +265,4 @@ html, body {
   margin-bottom: 10px;
   /* color: #f08804; */
 }
+
