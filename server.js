@@ -1,9 +1,11 @@
 const express = require("express");
 const app = express();
 
-app.use(express.static("public")); // Serve static files from 'public' folder
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
 
-const expressServer = app.listen(8080);
 
 const arr = [
 
