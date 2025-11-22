@@ -5,7 +5,7 @@ let username="";
 btn.addEventListener("click",()=>{
     username=homeuser.value;
     sessionStorage.setItem("username",username);
-    window.location.href = "index.html";
+    window.location.href = "home.html";
 })
 
 const openBtn = document.getElementById('openContactPanel');

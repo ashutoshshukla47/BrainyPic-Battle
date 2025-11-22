@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GuessWin</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="/socket.io/socket.io.js"></script>
+    <title>Welcome: Lets Play and Learn</title>
+    <link rel="stylesheet" href="stylehome.css">
 </head>
 <body>
     <div id="menu">
@@ -13,7 +12,7 @@
             <img class="logoimg" src="logo3.gif" alt="BrainyPic Battle" height="50px">
         </div>
         <div class="navbar">
-            <a class="anch" href="home.html">Home</a>
+            <a class="anch" href="index.html">Home</a>
             <a class="anch">About Us</a>
             <a class="anch" href="projects.html">Projects</a>
             <a class="anch" id="openContactPanel">Contact Us</a>
@@ -29,31 +28,16 @@
             <li><a href="https://github.com/005-adarsh-pandey" target="_blank">💻 GitHub</a></li>
         </ul>
     </div>
-    <div class="scoreboard">
-        <div>
-            <h4 class="name"></h4>
-            <h5 class="score"></h5>
-        </div>
-        <img src="V (1).gif">
-        <div style="background-color:  #abcc86; margin-left:-5.5rem; margin-right:-2.8rem; padding-left: 1.2rem; padding-right: 1rem; border-radius: 0rem 1rem 1rem 0rem;">
-            <h4 class="oname"></h4>
-            <h5 class="oscore"></h5>
-        </div>
+    <div id="cntr"></div>
+    <div class="login">
+        <h1>
+            Enter Username:
+        </h1>
+        <input class="textbox" type="text" placeholder="Username">
     </div>
-    <div class="mainbox">
-        <div class="fruit"></div>
-        <div class="option">
-            <button class="btn" id="a">Still</button>
-            <button class="btn" id="b">Wating</button>
-            <button class="btn" id="c">For</button>
-            <button class="btn" id="d">Opponent</button>
-        </div>
+    <div class="btn">
+        <button id="submit">Start</button>
     </div>
-    <footer class="low">
-        <hr>
-        <pre>
-          <a href="tel:+917697990750"><img src="https://thumbs.dreamstime.com/b/contact-us-phone-icon-special-cyan-blue-square-button-isolated-reflected-abstract-illustration-90194278.jpg" alt="Contact us on call:-6232653474" height="100"/></a>                         <a href="mailto:abhinavpan2004@gmail.com"><img src="https://2.bp.blogspot.com/-iXkK1A9qcXM/V-bKdPE5B5I/AAAAAAAABnY/t59LPpUur-I3W3lnOmhXZxwNzNftSwP6ACK4B/s1600/emailmebutton.png" alt="Click to Email me" height="100"/></a>                          <a href="https://www.linkedin.com/in/adarsh-pandey-nitt" target="_main"><img src="https://logos-world.net/wp-content/uploads/2020/06/Linkedin-Logo-2003-700x394.png" alt="Linkedin Profile" height="100"/></a>                        <a href="https://github.com/005-adarsh-pandey" target="_main"><img src="https://pngimg.com/uploads/github/github_PNG65.png" alt="Linkedin Profile" height="100"/></a></pre>
-    </footer>
 </body>
-<script src="app.js"></script>
+<script src="home.js"></script>
 </html>
