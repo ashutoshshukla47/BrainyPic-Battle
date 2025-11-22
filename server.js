@@ -17,6 +17,10 @@ const socketio = require("socket.io"); // <- move this up
 const app = express();
 
 app.use(express.static("public")); // static files
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/home.html");
+});
+
 
 const PORT = process.env.PORT || 8080;
 
@@ -29,10 +33,6 @@ const io = socketio(server);
 // ✅ listen using the HTTP server
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-});
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/home.html");
 });
 
 
