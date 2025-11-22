@@ -18,7 +18,7 @@ let opscore=document.querySelector(".oscore");
 opscore.innerText=`Opponent Score:  ${j}`;
 // Send username to the WebSocket server
 
-const socket=io("http://192.168.139.18:8080");
+const socket=io();
 
 let room=null;
 

@@ -1,12 +1,38 @@
+// const express = require("express");
+// const app = express();
+
+// app.use(express.static("public")); // static files
+
+// const PORT = process.env.PORT || 8080;
+
+// app.listen(PORT, () => {
+//   console.log(`Server running on port ${PORT}`);
+// });
+
+
 const express = require("express");
+const http = require("http");          // <- add this
+const socketio = require("socket.io"); // <- move this up
+
 const app = express();
 
 app.use(express.static("public")); // static files
 
 const PORT = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
+// ✅ create HTTP server from express app
+const server = http.createServer(app);
+
+// ✅ attach socket.io to that server
+const io = socketio(server);
+
+// ✅ listen using the HTTP server
+server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+});
+
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/public/home.html");
 });
 
 
@@ -146,8 +172,8 @@ const arr = [
     }
 ];
 
-const socketio = require("socket.io");
-const io = socketio(expressServer);
+// const socketio = require("socket.io");
+// const io = socketio(app);
 
 let users = [];
 
