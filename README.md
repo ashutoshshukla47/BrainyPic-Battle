@@ -1092,4 +1092,24 @@ print("✓ Endpoint deleted")
 
 🎉 **Congratulations!** You've successfully deployed your first ML model to production!
 
+
+
+
+
+
+azure app sevice for dynamic web
+
+so create a instance
+then region should be east asia and resourcee grp should be newly created at that time only
+
+just review and create
+
+go to resouce-> deployment center-> chose local files-> and upload the zip file and boom done!
+
+
+
+
+
+
+
 **Your API URL**: `https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/predict`
