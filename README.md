@@ -1108,8 +1108,24 @@ go to resouce-> deployment center-> chose local files-> and upload the zip file 
 
 
 
+azure VM 
 
+so create a virtual machine 
+create a new resource grp every time
+region east asia
+azure selected zone
+security type standard
+select all inbound ports
 
+hit review and create
 
+then download the key
+ and then go to resource connect
 
-**Your API URL**: `https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/predict`
+ edit krke kuch hoga uspe jana he or 
+ key ka path dalna he
+ networking me jakr inbound port rule add krna he
+
+ phir cmd open krna he udhr se jo command milega uuse run krna he
+
+ same as EC2
