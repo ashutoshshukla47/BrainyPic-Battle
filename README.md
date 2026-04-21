@@ -28,7 +28,11 @@ Settings:
 Notebook instance name: simple-deployment-demo
 Instance type: ml.t3.medium
 Platform: Amazon Linux 2, JupyterLab 3
-IAM role: Create new role → Select “Any S3 bucket” → Create role
+
+
+(NOT NOW WE WILL DO IT LATER)IAM role: Create new role → Select “Any S3 bucket” → Create role
+
+
 Click Create notebook instance
 Wait 3–5 minutes until status = InService
 Click Open JupyterLab
